@@ -1,10 +1,10 @@
 #include <iostream>
-#include <vector>
 
-typedef struct 
+class element
 {
+public:
 	int	num;
-} element;
+};
 
 template <typename T>
 static void	ft_swap(T *a, int i, int j)
@@ -14,14 +14,15 @@ static void	ft_swap(T *a, int i, int j)
 	a[j] = tmp;
 }
 
-void		msort(element *a, int p, int q, int(*cmp)(element, element))
+void		merge_sort(element *a, int p, int q, int(*cmp)(element, element))
 {
 	if (p >= q)
 		return;
 
 	int mid = (p + q) / 2;
-	msort(a, p, mid, cmp);
-	msort(a, mid + 1, q, cmp);
+	merge_sort(a, p, mid, cmp);
+	merge_sort(a, mid + 1, q, cmp);
+
 	for (int i = p - 1; i < q; ++i)
 	{
 		int	swapix = i;
@@ -47,7 +48,7 @@ int			main()
 		cout << e.num << " ";
 	cout << endl;
 
-	msort(elem, 1, 4, [](element a, element b) { if (a.num > b.num) return (1); else if (a.num == b.num) return (0); else return (-1); });
+	merge_sort(elem, 1, 4, [](element a, element b) { if (a.num > b.num) return (1); else if (a.num == b.num) return (0); else return (-1); });
 
 	for (auto& e : elem)
 		cout << e.num << " ";

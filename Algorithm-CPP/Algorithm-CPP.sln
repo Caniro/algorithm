@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Algorithm-CPP", "Algorithm-CPP\Algorithm-CPP.vcxproj", "{20237EF2-C09F-4AD1-AFBB-800331CA284E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "quickSort", "quickSort\quickSort.vcxproj", "{5F16F7EE-A9F1-4CC7-8949-2F2372F7CE2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{20237EF2-C09F-4AD1-AFBB-800331CA284E}.Release|x64.Build.0 = Release|x64
 		{20237EF2-C09F-4AD1-AFBB-800331CA284E}.Release|x86.ActiveCfg = Release|Win32
 		{20237EF2-C09F-4AD1-AFBB-800331CA284E}.Release|x86.Build.0 = Release|Win32
+		{5F16F7EE-A9F1-4CC7-8949-2F2372F7CE2B}.Debug|x64.ActiveCfg = Debug|x64
+		{5F16F7EE-A9F1-4CC7-8949-2F2372F7CE2B}.Debug|x64.Build.0 = Debug|x64
+		{5F16F7EE-A9F1-4CC7-8949-2F2372F7CE2B}.Debug|x86.ActiveCfg = Debug|Win32
+		{5F16F7EE-A9F1-4CC7-8949-2F2372F7CE2B}.Debug|x86.Build.0 = Debug|Win32
+		{5F16F7EE-A9F1-4CC7-8949-2F2372F7CE2B}.Release|x64.ActiveCfg = Release|x64
+		{5F16F7EE-A9F1-4CC7-8949-2F2372F7CE2B}.Release|x64.Build.0 = Release|x64
+		{5F16F7EE-A9F1-4CC7-8949-2F2372F7CE2B}.Release|x86.ActiveCfg = Release|Win32
+		{5F16F7EE-A9F1-4CC7-8949-2F2372F7CE2B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

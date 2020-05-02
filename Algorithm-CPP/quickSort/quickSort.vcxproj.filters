@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="mergeSort.cpp">
+    <ClCompile Include="..\Algorithm-CPP\quickSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
