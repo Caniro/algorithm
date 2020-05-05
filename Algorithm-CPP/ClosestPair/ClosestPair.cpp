@@ -77,7 +77,7 @@ int		main()
 	for (int i = 0; i < 10; ++i)
 		cout << v[i];
 	vec2 pair[2] = { {FLT_MIN, FLT_MIN},{FLT_MAX, FLT_MAX} };
-	closestPair(v, 0, sizeof(v)/sizeof(v[0]), pair);
+	closestPair(v, 0, sizeof(v)/sizeof(v[0]) - 1, pair);
 	cout << "first point -  " << pair[0] << "second point -  " << pair[1];
 	cout << "Distance : " << (pair[0] - pair[1]).getMagnitude() << endl;
 
