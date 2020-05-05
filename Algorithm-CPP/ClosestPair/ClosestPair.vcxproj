@@ -152,6 +152,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ClosestPair.cpp" />
+    <ClCompile Include="Engine\DrawFunctions.cpp" />
+    <ClCompile Include="Engine\Game2D.cpp" />
+    <ClCompile Include="Engine\Timer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Engine\Colors.h" />
+    <ClInclude Include="Engine\DrawFunctions.h" />
+    <ClInclude Include="Engine\Game2D.h" />
+    <ClInclude Include="Engine\RandomNumberGenerator.h" />
+    <ClInclude Include="Engine\RGB.h" />
+    <ClInclude Include="Engine\Timer.h" />
+    <ClInclude Include="Engine\Vector2.h" />
+    <ClInclude Include="Engine\Vector3.h" />
+    <ClInclude Include="Engine\yh.h" />
+    <ClInclude Include="quicksort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
