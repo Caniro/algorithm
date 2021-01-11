@@ -1,3 +1,4 @@
+// https://programmers.co.kr/learn/courses/30/lessons/68644
 /* #include <string>
 #include <vector>
 #include <iostream>
@@ -127,7 +128,7 @@ using namespace std;
 vector<int> solution(vector<int> numbers)
 {
     vector<int> answer;
-	set<int>	tmp;
+    set<int>    tmp;
     int         len;
 
     len = numbers.size();
