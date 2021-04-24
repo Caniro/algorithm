@@ -1,63 +1,44 @@
 #include <iostream>
+#include <vector>
 
-class element
+void PrintArr(const std::vector<int>& arr)
 {
-public:
-	int		num;
-	char	alpha;
-
-	friend std::ostream& operator << (std::ostream & out, element & e)
-	{
-		out << e.num << " " << e.alpha << std::endl;
-		return (out);
-	}
-};
-
-template <typename T>
-static void	ft_swap(T* a, int i, int j)
-{
-	T tmp = a[i];
-	a[i] = a[j];
-	a[j] = tmp;
+	for (auto& e : arr)
+		std::cout << e << ' ';
+	std::cout << std::endl;
 }
 
-void	quick_sort(element* a, int left, int right, int(*cmp)(element, element))
+void QuickSort(std::vector<int>& arr, int left, int right)
 {
-	int	pivot = left;
+	if (left >= right)
+		return ;
+
+	int	pivot = (left + right) / 2;
 	int	high = left + 1;
 	int	low = right;
 
-	if (left >= right)
-		return ;
-	while (high < low)
+	std::swap(arr[pivot], arr[left]);
+	while (high <= low)
 	{
-		while (high <= right && a[high].num < a[pivot].num)
+		while ((high <= right) && (arr[high] <= arr[left]))
 			high++;
-		while (low >= left && a[low].num > a[pivot].num)
+		while ((low > left) && (arr[low] >= arr[left]))
 			low--;
-		if (high >= low)
+		if ((high > right) || (low == left) || (high >= low))
 			break;
-		ft_swap(a, high, low);
+		std::swap(arr[high], arr[low]);
 	}
-	ft_swap(a, pivot, low);
+	std::swap(arr[left], arr[low]);
 
-	quick_sort(a, left, low - 1, cmp);
-	quick_sort(a, low + 1, right, cmp);
+	QuickSort(arr, left, low - 1);
+	QuickSort(arr, low + 1, right);
 }
 
-int		main()
+int main()
 {
-	using namespace std;
+	std::vector<int> arr{ 11, 9, 2, 12, 8, 15, 18, 10 };
 
-	element elem[] = { {10,'a'}, {2,'b'}, {7,'c'}, {5,'d'}, {15,'e'}, {3,'f'}, {5,'g'} };
-
-	for (auto& e : elem)
-		cout << e;
-	cout << endl;
-
-	quick_sort(elem, 0, sizeof(elem)/sizeof(elem[0]) - 1, [](element a, element b) { if (a.num > b.num) return (1); else if (a.num == b.num) return (0); else return (-1); });
-
-	for (auto& e : elem)
-		cout << e;
-	cout << endl;
+	PrintArr(arr);
+	QuickSort(arr, 0, arr.size() - 1);
+	PrintArr(arr);
 }
