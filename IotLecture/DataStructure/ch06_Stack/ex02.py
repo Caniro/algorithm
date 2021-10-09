@@ -36,6 +36,14 @@ def pop():
     top -= 1
     return data
 
+def peek():
+    global SIZE, stack, top
+
+    if isStackEmpty():
+        print('stack is empty')
+        return None
+    return stack[top]
+
 SIZE = 5
 stack = [None for _ in range(SIZE)]
 # stack = [None] * SIZE
@@ -50,9 +58,11 @@ push('꿀물')
 print('바닥:', stack)
 
 print(pop())
+print('다음 :', peek())
 print(pop())
 print(pop())
 print(pop())
 print(pop())
 print(pop())
+print('다음 :', peek())
 print('바닥:', stack)

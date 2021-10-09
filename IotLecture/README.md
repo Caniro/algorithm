@@ -8,4 +8,4 @@
 
 ---
 
-## [자료구조](DataStructure/README.md)
+## [자료구조](DataStructure)
